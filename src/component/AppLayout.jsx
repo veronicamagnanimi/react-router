@@ -1,15 +1,15 @@
 import {Outlet} from "react-router-dom";
+import AppHeader from "./AppHeader";
 
 const AppLayout = () => {
 
     return (
         <>
-        <header>Header</header>
+        <AppHeader />
         <Outlet />
-        <footer>Footer</footer>
+        {/* <footer>Footer</footer> */}
         </>
     )
-    
 }
 
 export default AppLayout;
