@@ -17,6 +17,7 @@ const AppHeader = () => {
     return (
 
   <header>
+    <div className="dFlex">
     <ul>
       {navbar.map((curNav, index) => {
         return (
@@ -24,6 +25,7 @@ const AppHeader = () => {
         )
       })}
     </ul>
+    </div>
   </header>
 
     )
