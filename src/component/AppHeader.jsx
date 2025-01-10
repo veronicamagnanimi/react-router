@@ -4,13 +4,13 @@ const AppHeader = () => {
 
   const navbar = [
     {
-      path:"/", title:"HomePage"
+      path:"/", title:"Home Page"
     },
     {
-      path:"/ChiSiamo", title:"ChiSiamo"
+      path:"/ChiSiamo", title:"Chi Siamo"
     },
     {
-    path:"/PostsList", title:"PostsList"
+    path:"/PostPage", title:"Posts List"
     }
   ]
 

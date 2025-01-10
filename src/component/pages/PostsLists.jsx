@@ -1,6 +1,6 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import axios from "axios";
-import AppPost from "./AppPost";
+// import AppPost from "./AppPost";
 const apiUrl = import.meta.env.VITE_API_URL
 
 const initialForm = {
@@ -13,37 +13,37 @@ const PostsList = () => {
 
     const [activeArticles, setActiveArticles] = useState([]);
     const [formData, setFormData] = useState(initialForm);
-    const [tags, setTags] = useState([]);
-    const [filter, setFilter] = useState("all");
+    // const [tags, setTags] = useState([]);
+    // const [filter, setFilter] = useState("all");
   
   
   //post axios
-  const getPosts = () => {
-    axios.get(`${apiUrl}/bacheca`).then((resp) => {
-      console.log("Dati ricevuti", resp);
-      setActiveArticles(resp.data.posts)
-    })
-  }
+//   const getPosts = () => {
+//     axios.get(`${apiUrl}/bacheca`).then((resp) => {
+//       console.log("Dati ricevuti", resp);
+//       setActiveArticles(resp.data.posts)
+//     })
+//   }
   
   //USE EFFECT
-  useEffect(() => {
-    getPosts();
-  }, []);
+//   useEffect(() => {
+//     getPosts();
+//   }, []);
   
   //USE EFFECT TAG
-  useEffect(() => {
-    getTags();
-  }, [filter]);  
+//   useEffect(() => {
+//     getTags();
+//   }, [filter]);  
   
   
   
     //funzione per selezionare i tag
-    const getTags = () => {
-      axios.get(`${apiUrl}/tags`).then((resp) => {
-        console.log("Tag", resp);
-        setTags(resp.data.tags);
-      })
-    }
+    // const getTags = () => {
+    //   axios.get(`${apiUrl}/tags`).then((resp) => {
+    //     console.log("Tag", resp);
+    //     setTags(resp.data.tags);
+    //   })
+    // }
   
     //funzione per aggiungere un nuovo articolo
     const handleArticlesForm = (event) => {
@@ -72,20 +72,20 @@ const PostsList = () => {
   }
   
   //funzione delete
-  const handleDelete = (idDaCancellare) => {
-    axios.delete(`${apiUrl}/posts/${idDaCancellare}`).then((resp) => {
-      const newArray = activeArticles.filter(
-        (curPost) => curPost.id !== idDaCancellare
-      );
-      setActiveArticles(newArray);
-    });
-  };
+//   const handleDelete = (idDaCancellare) => {
+//     axios.delete(`${apiUrl}/posts/${idDaCancellare}`).then((resp) => {
+//       const newArray = activeArticles.filter(
+//         (curPost) => curPost.id !== idDaCancellare
+//       );
+//       setActiveArticles(newArray);
+//     });
+//   };
   
   
     return (
       <>
         <div className="container">
-          <section>
+          {/* <section>
             <select name="tag" id="" value={filter} onChange={(event) => setFilter(event.target.value)}>
               <option value="all">All tags</option>
               {tags.map((curTag, index) => <option key={index} value={curTag}>{curTag}</option>)}
@@ -106,7 +106,7 @@ const PostsList = () => {
           ) : (
             <p className="text-secondary">There are currently no articles</p>
           )}
-         
+          */}
          {/* FORM */}
   
          {/*Title*/}

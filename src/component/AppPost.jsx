@@ -1,4 +1,5 @@
 const apiUrl = import.meta.env.VITE_API_URL
+import { Link } from "react-router-dom";
 
 const AppPost = ({post}) => {
     
@@ -8,6 +9,9 @@ const AppPost = ({post}) => {
         <img src={`${apiUrl}/${post.image}`} alt={post.title} />
         <div>{post.tags && post.tags.map((curTag, index) => 
         <span key={index}>{curTag}</span>)}</div>
+        <div>
+        <Link className="btn btn-success" to={`/pizzas/${post.id}`}>Dettagli</Link>
+        </div>
         
         </div>
     )
