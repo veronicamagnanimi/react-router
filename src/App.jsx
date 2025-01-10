@@ -6,6 +6,7 @@ import PostPage from "./component/pages/posts/PostPage";
 import DashBoardPage from "./component/pages/DashBoardPage";
 import ShowPage from "./component/pages/posts/ShowPage";
 import CreatePage from "./component/pages/posts/CreatePage";
+// import NotFoundPage from "./component/pages/posts/NotFoundPage";
 
 function App() {
   return (
@@ -16,12 +17,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/ChiSiamo" element={<ChiSiamo />} />
           <Route path="/posts">
-          <Route index element={<PostPage />} />
-          <Route path="create" element={<CreatePage />} />
-          <Route path=":id" element={<ShowPage />} />
+            <Route index element={<PostPage />} />
+            <Route path="create" element={<CreatePage />} />
+            <Route path=":id" element={<ShowPage />} />
           </Route>
-
-          {/* <Route path="/PostsList" element={<PostsList />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>

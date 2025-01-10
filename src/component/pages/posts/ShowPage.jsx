@@ -27,12 +27,12 @@ const ShowPage = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [id]);
+  }, [id, navigate]);
 
   return (
     <>
       <div>
-        <a className="btn btn-primary" onClick={() => navigate(-1)}>
+        <a className="btn btn-secondary m-3" onClick={() => navigate(-1)}>
           Ritorna
         </a>
       </div>
@@ -42,10 +42,10 @@ const ShowPage = () => {
           <img className="w-50" src={`${apiUrl}/${post.image}`} alt="" />
 
           <div className="mt-4">
-            <Link className="btn btn-primary" to={`/posts/${post.id - 1}`}>
+            <Link className="btn btn-secondary m-3" to={`/posts/${post.id - 1}`}>
               Precedente
             </Link>
-            <Link className="btn btn-primary" to={`/posts/${post.id + 1}`}>
+            <Link className="btn btn-secondary" to={`/posts/${post.id + 1}`}>
               Successiva
             </Link>
           </div>

@@ -41,3 +41,6 @@ a.active {
     color: black
 }
 
+.tag {
+    margin-right: 5px;
+}

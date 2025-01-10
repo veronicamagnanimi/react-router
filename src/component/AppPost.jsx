@@ -8,9 +8,9 @@ const AppPost = ({post}) => {
         <h4>{post.title}</h4>
         <img src={`${apiUrl}/${post.image}`} alt={post.title} />
         <div>{post.tags && post.tags.map((curTag, index) => 
-        <span key={index}>{curTag}</span>)}</div>
+        <span key={index} className="tag">{curTag}</span>)}</div>
         <div>
-        <Link className="btn btn-success" to={`/pizzas/${post.id}`}>Dettagli</Link>
+        <Link className="btn btn-secondary" to={`/posts/${post.id}`}>Dettagli</Link>
         </div>
         </div>
     )

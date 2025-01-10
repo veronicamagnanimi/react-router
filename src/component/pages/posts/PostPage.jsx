@@ -48,7 +48,7 @@ const PostPage = () => {
   return (
     <>
       <div className="container">
-        <section>
+        <section className="d-flex justify-content-between align-items-center">
           <select
             name="tag"
             id=""
@@ -62,12 +62,11 @@ const PostPage = () => {
               </option>
             ))}
           </select>
-        </section>
-        <section>
-          <Link className="btn btn-primary" to="/posts/create">
-            Aggiungi un nuovo post
+          <Link className="btn btn-secondary" to="/posts/create">
+            Aggiungi un nuovo articolo
           </Link>
         </section>
+       
         <h2 className="text-center text-secondary my-3 fs-1">New articles</h2>
         {activeArticles.length > 0 ? (
           <div className="display">

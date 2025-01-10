@@ -10,7 +10,7 @@ const AppHeader = () => {
       path:"/ChiSiamo", title:"Chi Siamo"
     },
     {
-    path:"/PostPage", title:"Posts List"
+    path:"/posts", title:"Posts List"
     }
   ]
 
