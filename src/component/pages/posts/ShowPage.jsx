@@ -5,33 +5,33 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const ShowPage = () => {
-    const [post, setPost] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const { id } = useParams();
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const { id } = useParams();
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-      setLoading(true);
-      axios
-        .get(`${apiUrl}/posts/${id}`)
-        .then((resp) => {
-          setPost(resp.data);
-        })
-        .catch((err) => {
-          if (err.status === 404) {
-            navigate("/not-found");
-          }
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }, [id]);
+  //USE EFFECT
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get(`${apiUrl}/posts/${id}`)
+      .then((resp) => {
+        setPost(resp.data);
+      })
+      .catch((err) => {
+        if (err.status === 404) {
+          navigate("/not-found");
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [id]);
 
-    
-    return (
-        <>
-         <div>
+  return (
+    <>
+      <div>
         <a className="btn btn-primary" onClick={() => navigate(-1)}>
           Ritorna
         </a>
@@ -52,14 +52,8 @@ const ShowPage = () => {
         </div>
       )}
       {loading && <p>Loading...</p>}
-        
-        
-        
-        
-        </>
-    )
-  
-
-}
+    </>
+  );
+};
 
 export default ShowPage;

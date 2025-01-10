@@ -5,6 +5,7 @@ import ChiSiamo from "./component/ChiSiamo";
 import PostPage from "./component/pages/posts/PostPage";
 import DashBoardPage from "./component/pages/DashBoardPage";
 import ShowPage from "./component/pages/posts/ShowPage";
+import CreatePage from "./component/pages/posts/CreatePage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/ChiSiamo" element={<ChiSiamo />} />
           <Route path="/posts">
           <Route index element={<PostPage />} />
+          <Route path="create" element={<CreatePage />} />
           <Route path=":id" element={<ShowPage />} />
           </Route>
 

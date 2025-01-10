@@ -12,7 +12,6 @@ const AppPost = ({post}) => {
         <div>
         <Link className="btn btn-success" to={`/pizzas/${post.id}`}>Dettagli</Link>
         </div>
-        
         </div>
     )
 }
