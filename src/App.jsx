@@ -6,7 +6,7 @@ import PostPage from "./component/pages/posts/PostPage";
 import DashBoardPage from "./component/pages/DashBoardPage";
 import ShowPage from "./component/pages/posts/ShowPage";
 import CreatePage from "./component/pages/posts/CreatePage";
-// import NotFoundPage from "./component/pages/posts/NotFoundPage";
+import NotFoundPage from "./component/pages/posts/NotFoundPage";
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
             <Route path="create" element={<CreatePage />} />
             <Route path=":id" element={<ShowPage />} />
           </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

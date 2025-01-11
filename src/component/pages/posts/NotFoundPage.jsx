@@ -5,7 +5,7 @@ const NotFoundPage = () => {
 
   return (
     <>
-      <h1>Errore 404"</h1>
+      <h1>Errore 404</h1>
       <button
         onClick={() => {
           navigate(-1);
